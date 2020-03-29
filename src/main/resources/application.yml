@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: after_route
+          uri: https://example.org
+          predicates:
+            - name: Custom
+              args:
+                testStr: foo
